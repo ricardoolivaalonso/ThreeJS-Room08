@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><script defer="defer" src="bundle.235db7ebb513ba507e96.js"></script><link href="main.css" rel="stylesheet"></head><body><canvas class="webgl"></canvas><script type="x-shader/x-vertex" id="vertexshaderCandle">void main() {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><script defer="defer" src="bundle.03c31a60aaf217136003.js"></script><link href="main.css" rel="stylesheet"></head><body><canvas class="webgl"></canvas><script type="x-shader/x-vertex" id="vertexshaderCandle">void main() {
             gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
         }</script><script type="x-shader/x-fragment" id="fragmentshaderCandle">uniform float time; 
         uniform float colorSpeed;
@@ -48,7 +48,7 @@
             vec3 finalColor = mix(vec3(0.545,0.553,0.306), waveColor, waveIntensity);
         
             gl_FragColor = vec4(finalColor, 1.0);
-        }</script><script type="x-shader/x-vertex" id="vertexshader">uniform float uPixelRatio;
+        }</script>// Original code: https://codepen.io/aderaaij/details/BapYONL<script type="x-shader/x-vertex" id="vertexshader">uniform float uPixelRatio;
         uniform float uSize;
         uniform float uTime;
         attribute float aScale;

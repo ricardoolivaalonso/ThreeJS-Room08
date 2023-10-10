@@ -54,7 +54,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.outputEncoding = THREE.sRGBEncoding
-renderer.autoClear = false
+
 
 // Materials
 const bakedTexture = textureLoader.load('/baked.jpg')
@@ -100,7 +100,7 @@ const doorMaterial = new THREE.ShaderMaterial({
 })
 
 
-
+//  Original code: https://codepen.io/aderaaij/details/BapYONL
 const firefliesGeometry = new THREE.BufferGeometry()
 const firefliesCount = 30
 const positionArray = new Float32Array(firefliesCount * 3)
@@ -182,8 +182,6 @@ const clock = new THREE.Clock()
 // Animation
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
-
-
     candleMaterial.uniforms.time.value += 0.075
     doorMaterial.uniforms.time.value += 0.1
     bubbleMaterial.uniforms.time.value += 0.035
@@ -193,7 +191,6 @@ const tick = () => {
     // renderer.render(scene, camera)
     composer.render()
     window.requestAnimationFrame(tick)
-    // updateFlies()
 }
 
 tick()
